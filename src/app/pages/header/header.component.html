@@ -1,0 +1,102 @@
+<!-- Header START -->
+<header class="navbar-light navbar-sticky header-static">
+	<!-- Logo Nav START -->
+	<nav class="navbar navbar-expand-xl">
+		<div class="container-fluid px-3 px-xl-5">
+			<!-- Logo START -->
+			<a class="navbar-brand" routerLink="/home">
+				<img class="light-mode-item navbar-brand-item" src="assets/Edutech-logo.svg" alt="logo">
+				<img class="dark-mode-item navbar-brand-item" src="assets/Edutech-logo.svg" alt="logo">
+			</a>
+			<!-- Logo END -->
+
+			<!-- Responsive navbar toggler -->
+			<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-animation">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</button>
+
+            <!-- Main Navbar Start -->
+                <div class="navbar-collapse w-100 collapse container" id="navbarCollapse">
+                    <!-- Nav category menu START -->
+				<ul  class="navbar-nav navbar-nav-scroll me-auto">
+					<!-- Nav item-->
+					<li  class="nav-item dropdown dropdown-menu-shadow-stacked" >
+						<a class="nav-link btn-lg btn-primary-soft px-3 py-3 py-xl-0 btn" href="#" id="categoryMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="bi bi-ui-radios-grid me-2"></i>
+							<span>Category</span>
+						</a>
+						<ul class="dropdown-menu"  aria-labelledby="categoryMenu">
+							<!-- Dropdown submenu -->
+							<li class="d-none d-lg-block"> <a class="dropdown-item"  [routerLink]="'home'" fragment="programs" >Programs</a></li>
+							<li  class="nav-item d-lg-none" >
+								<a class="nav-link " href="#" id="demoMenu" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" [routerLink]="'home'" fragment="programs">Programs</a>
+							</li>
+							<li class="d-none d-lg-block"> <a class="dropdown-item"  [routerLink]="'event'">Events</a></li>
+							<li  class="nav-item d-lg-none" >
+								<a class="nav-link " href="#" id="demoMenu" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" [routerLink]="'event'">Events</a>
+							</li>
+							<li class="d-none d-lg-block"> <a class="dropdown-item"  [routerLink]="'home'" fragment="career">Careers</a></li>
+							<li  class="nav-item d-lg-none" >
+								<a class="nav-link " href="#" id="demoMenu" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" [routerLink]="'home'" fragment="career">Careers</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!-- Nav category menu END -->
+
+                    <!-- Nav Main menu START -->
+                    <ul  class="navbar-nav navbar-nav-scroll me-auto mx-5">
+                        <!-- Nav item-->
+                        <li  class="nav-item d-none d-lg-block ">
+                            <a class="nav-link " href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [routerLink]="'/home'" fragment="home">Home</a>
+                        </li>
+						<li class="nav-item d-lg-none">
+							<a class="nav-link " routerLink="/home" fragment="" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false">Home</a>
+						</li>
+                        <!-- Nav item-->
+                        <li  class="nav-item d-none d-lg-block" >
+                            <a class="nav-link " href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [routerLink]="'home'" fragment="programs">Programs</a>
+                        </li>
+						<li  class="nav-item d-lg-none" >
+                            <a class="nav-link " href="#" id="demoMenu" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" [routerLink]="'home'" fragment="programs">Programs</a>
+                        </li>
+                        <!-- Nav item-->
+                        <li  class="nav-item d-none d-lg-block" >
+                            <a class="nav-link " href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [routerLink]="'event'">Events</a>
+                        </li>
+						<li  class="nav-item d-lg-none" >
+                            <a class="nav-link " href="#" id="demoMenu" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" [routerLink]="'event'" >Events</a>
+                        </li>
+                        <!-- Nav item-->
+                        <li  class="nav-item dropdown" >
+                            <a class="nav-link dropdown-toggle " href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
+                            <ul class="dropdown-menu" aria-labelledby="demoMenu">
+                                <li class="d-none d-lg-block"> <a class="dropdown-item " style="cursor: pointer;" [routerLink]="'home'" fragment="team" >Team</a></li>
+                                <li class="d-none d-lg-block"> <a class="dropdown-item" style="cursor: pointer;" [routerLink]="'home'" fragment="career" >Careers</a></li>
+								<li class="d-lg-none"> <a class="dropdown-item " style="cursor: pointer;" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" [routerLink]="'home'" fragment="team" >Team</a></li>
+                                <li class="d-lg-none"> <a class="dropdown-item" style="cursor: pointer;" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" [routerLink]="'home'" fragment="career" >Careers</a></li>
+                            </ul>
+                        </li>
+                        <!-- Nav item-->
+                        <li  class="nav-item d-none d-lg-block" >
+                            <a class="nav-link " href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [routerLink]="'home'" fragment="contactus">Contact Us</a>
+                        </li>
+						<li  class="nav-item d-lg-none" >
+                            <a class="nav-link " href="#" id="demoMenu" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" [routerLink]="'home'" fragment="contactus">Contact Us</a>
+                        </li>
+                    </ul>
+                    <!-- Nav Main menu END -->
+                </div>
+            <!-- Main Navbar end -->
+
+			
+		</div>
+	</nav>
+	<!-- Logo Nav END -->
+</header>
+<!-- Header END -->
+

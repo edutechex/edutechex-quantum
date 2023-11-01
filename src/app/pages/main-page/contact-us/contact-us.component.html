@@ -1,0 +1,74 @@
+ <!-- =======================
+    Image and contact form START -->
+    <section >
+        <div class="container">
+            <div class="row g-4 g-lg-0 align-items-center">
+                <h1 class="mt-4 mt-md- d-lg-none align-items-center text-center" style="color:#2AB2A6">Contact us</h1>
+                <div class="col-md-6 align-items-center text-center">
+                    <!-- Image -->
+                    <img src="https://eduport.webestica.com/assets/images/element/contact.svg" class="h-400px" alt="">
+                </div>
+    
+                <!-- Contact form START -->
+                <div class="col-md-6">
+                    <!-- Title -->
+                    <h2 class="mt-4 mt-md-0" style="color:#2AB2A6">Let's talk</h2>
+                    <p>To request information regarding any course or product, contact us directly or fill out the form and we will get back to your promptly</p>
+                        
+                    <form [formGroup]="contactUsForm" (ngSubmit)="onSubmit()">
+                        <!-- Name -->
+                        <div class="mb-4 bg-light-input">
+                            <label for="yourName" class="form-label">Your name *</label>
+                            <input type="text" class="form-control form-control-lg" formControlName="name" id="yourName" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                <div *ngIf="f.name.errors.required">Name is required</div>
+                            </div>
+                        </div>
+                        <!-- Email -->
+                        <div class="mb-4 bg-light-input">
+                            <label for="emailInput" class="form-label">Email address *</label>
+                            <input type="email" class="form-control form-control-lg" formControlName="email" id="emailInput" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                <div *ngIf="f.email.errors.required">Email is required</div>
+                            </div>
+                        </div>
+                         <!-- Phone No -->
+                         <div class="mb-4 bg-light-input">
+                            <label for="emailInput" class="form-label">Phone No *</label>
+                            <input type="email" class="form-control form-control-lg" formControlName="mobile" id="emailInput" [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }">
+                            <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+                                <div *ngIf="f.mobile.errors.required">Phone no is required</div>
+                            </div>
+                        </div>
+                        <!-- Message -->
+                        <div class="mb-4 bg-light-input">
+                            <label for="textareaBox" class="form-label">Message *</label>
+                            <textarea class="form-control" formControlName="message" id="textareaBox" rows="4"></textarea>
+                        </div>
+                        <!-- Button -->
+                        <div class="d-grid">
+                            <button class="btn btn-lg mb-0 text-white" style="background-color: #444cae;">Send Message</button>
+                        </div>	
+                    </form>
+                </div>
+                <div class="backdrop" [ngStyle]="{'display':display}"></div>
+                <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':display}">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content card shadow-lg p-3 mb-5 bg-body rounded">
+                            <!-- <div class="modal-header">
+                            <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">Model Title</h4>
+                            </div> -->
+                            <div class="modal-body text-center text-success">
+                                <!-- <h4 *ngIf="submitted">{{sumbmitMessage}}</h4> -->
+                                <p>Your message has been successfully sent. We will contact you very soon!</p>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal !-->
+                <!-- Contact form END -->
+            </div>
+        </div>
+    </section>
+    <!-- =======================
+    Image and contact form END -->
