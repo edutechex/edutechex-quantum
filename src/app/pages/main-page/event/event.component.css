@@ -1,19 +1,20 @@
-button {
-    position: relative;
-    background-color: #313d9c;
-    width: 30px;
-    height: 40px;
-    /* margin-bottom: 20px; */
+.bi{
+    border: 2px solid rgb(164, 160, 160);
+    border-radius: 50%;
+    cursor: pointer;
 }
-
-
+.bi:hover{
+    border: 1px solid black;
+    color: #ffffff;
+    background-color: rgb(96, 92, 92);
+}
 @media(min-width:1023px) {
-    button {
-        top: -50px;
-        left: -115px;
-        width: 43px;
-        height: 40px;
-        border-radius: 50%;
-        margin-bottom: 10px;
+    .custom-card {
+       width: 28rem;
     }
+}
+@media(max-width:768px){
+    .custom-card {
+        width: 18rem;
+     }
 }

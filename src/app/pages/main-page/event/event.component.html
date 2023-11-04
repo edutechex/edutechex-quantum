@@ -1,30 +1,22 @@
 <section>
 	<div class="container">
-		<div id="carouselExample" class="carousel slide">
-			<div class="row">
-				<div class="col-md-8">
-					<div class="carousel-inner">
-						<div class="carousel-item active">
-						  <img src="assets/images/car1.jpg" class="d-block w-100" alt="...">
-						</div>
-						<div class="carousel-item">
-						  <img src="assets/images/car2.jpg" class="d-block w-100" alt="...">
-						</div>
-						<div class="carousel-item">
-						  <img src="assets/images/car1.jpg" class="d-block w-100" alt="...">
-						</div>
-					  </div>
-				</div>
-				<button class="carousel-control-prev me-2" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="visually-hidden left-icon">Previous</span>
-				  </button>
-				  <button class="carousel-control-next " type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="visually-hidden right-icon">Next</span>
-				  </button>
-			</div>
-			
+
+		  
+		  <div class=" d-flex">
+			<h3>{{ currentEvent.monthName }}</h3>
+			<i class="bi bi-caret-left fa-2x mx-3" (click)="previousMonth()"></i>
+			<i class="bi bi-caret-right fa-2x" (click)="nextMonth()"></i>
+			<!-- <button type="button" class="btn btn-outline-secondary btn-sm mx-3" (click)="previousMonth()"> <span class="fs-3"><</span>  </button>
+		  <button type="button" class="btn btn-outline-secondary btn-sm" (click)="nextMonth()"> <span class="fs-3"> > </span> </button> -->
 		  </div>
+		  <hr>
+		  <div class="card border border-3 custom-card" >
+			<div class="card-body">
+			  <!-- <p> Stay Tuned for Updates</p> -->
+			  <img src="assets/images/event.jpg" alt="Month Image" />
+			</div>
+		  </div>
+		  <!-- <img [src]="currentEvent.image" alt="Month Image" /> -->
+		  
 	</div>
 </section>

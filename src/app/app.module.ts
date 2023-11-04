@@ -14,6 +14,10 @@ import { ContactUsComponent } from './pages/main-page/contact-us/contact-us.comp
 import { ReactiveFormsModule } from '@angular/forms';
 import { EventComponent } from './pages/main-page/event/event.component';
 import { CareerComponent } from './pages/main-page/career/career.component';
+import { CancellationPolicyComponent } from './pages/footer/cancellation-policy/cancellation-policy.component';
+import { PrivacyPolicyComponent } from './pages/footer/privacy-policy/privacy-policy.component';
+import { TermsConditionComponent } from './pages/footer/terms-condition/terms-condition.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,12 +31,16 @@ import { CareerComponent } from './pages/main-page/career/career.component';
     TeamComponent,
     ContactUsComponent,
     EventComponent,
-    CareerComponent
+    CareerComponent,
+    CancellationPolicyComponent,
+    PrivacyPolicyComponent,
+    TermsConditionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

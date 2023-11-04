@@ -34,8 +34,8 @@
                         </div>
                          <!-- Phone No -->
                          <div class="mb-4 bg-light-input">
-                            <label for="emailInput" class="form-label">Phone No *</label>
-                            <input type="email" class="form-control form-control-lg" formControlName="mobile" id="emailInput" [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }">
+                            <label for="phoneInput" class="form-label">Phone No *</label>
+                            <input type="text" class="form-control form-control-lg" formControlName="mobile" id="emailInput" [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }">
                             <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
                                 <div *ngIf="f.mobile.errors.required">Phone no is required</div>
                             </div>
