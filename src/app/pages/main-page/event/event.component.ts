@@ -10,17 +10,17 @@ export class EventComponent implements OnInit{
 
   eventList =[
    
-  {
-      'monthName':'November 2023',
-      'image':'assets/images/car1.jpg',
-  },
+  // {
+  //     'monthName':'November 2023',
+  //     'image':'assets/images/car1.jpg',
+  // },
   {
       'monthName':'December 2023',
-      'image':'',
+      'image':'assets/images/event/dec.jpg',
   },
   {
     'monthName':'January 2024',
-    'image':'assets/images/car1.jpg',
+    'image':'assets/images/event.jpg',
 },
 
   ]

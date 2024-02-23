@@ -10,10 +10,10 @@
 		  <button type="button" class="btn btn-outline-secondary btn-sm" (click)="nextMonth()"> <span class="fs-3"> > </span> </button> -->
 		  </div>
 		  <hr>
-		  <div class="card border border-3 custom-card" >
+		  <div class="card border border-3 custom-card w-50 h-50" >
 			<div class="card-body">
 			  <!-- <p> Stay Tuned for Updates</p> -->
-			  <img src="assets/images/event.jpg" alt="Month Image" />
+			  <img [src]="currentEvent.image" alt="Month Image" />
 			</div>
 		  </div>
 		  <!-- <img [src]="currentEvent.image" alt="Month Image" /> -->
