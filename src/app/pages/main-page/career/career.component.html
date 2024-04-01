@@ -6,25 +6,17 @@
 
 <!-- Job Listings -->
 <div class="container">
-    <div class="row">
+    <div class="row" *ngFor="let data of allCareerData">
         <div class="col-md-6 align-items-center text-center">
             <!-- Image -->
-            <img src="assets/images/career.png" class="h-400px career-img" alt="cimage">
+            <img [src]="data.image" class="h-400px career-img" alt="cimage">
         </div>
         <div class="col-md-6 mb-4">
             <!-- <h6>Careers at edutechEx-quantum</h6> -->
             <div class="card">
                 <div class="card-body">
-                    <h2 class="card-title">Work with us</h2>
-                    <p class="card-text">Are you ready to take the quantum leap? We're looking for people who are
-                        passionate about the possibilities of quantum computing trainings, services, products and want
-                        to work alongside an international and talented team to make it a reality. Whether you're a
-                        recent graduate or an experienced professional, we welcome you to join us on this journey.</p>
-                    <p>
-                        We are all bound by the desire to put EDUTECHEX at the forefront of the quantum computing
-                        training and build a technology pool to serve the needs of quantum industry which will have a
-                        positive impact on people's lives.
-                    </p>
+                    <h2 class="card-title">{{data.title}}</h2>
+                    <p class="card-text" [innerHTML]="data.about"></p>
                     <!-- <a href="#" class="btn btn-primary">Apply Now</a> -->
                 </div>
             </div>

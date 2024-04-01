@@ -9,7 +9,8 @@
                 <!-- <p class="mb-0">Choose from hundreds of courses from specialist organizations</p> -->
             </div>
         </div>
-        <!-- Card item START -->
+        <div class="d-lg-none">
+            <!-- Card item START -->
         <div class="col-sm-10 col-lg-3">
             <div class="card shadow p-3 h-100 w-100">
                 <div class="text-center p-4 rounded-3 position-relative mb-5 mb-md-0">
@@ -43,6 +44,23 @@
                     <blockquote>
                         <p>Head, Quantum Machine Learning <br>
                             Ph.D. in Quantum Chemistry <br> TU Berlin, Germany</p>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 col-lg-3">
+            <div class="card shadow p-3 h-100 w-100">
+                <div class="text-center p-4 rounded-3 position-relative mb-5 mb-md-0">
+                    <!-- Avatar -->
+                    <div class="avatar avatar-xl mb-3">
+                        <img class="avatar-img rounded-circle" src="assets/images/karthi.jpeg" alt="avatar">
+                    </div>
+                    <h6 class="mb-3">Mr. Karthi Ganesh </h6>
+                    <!-- <p>Class {{item?.class}}</p> -->
+                    <!-- Content -->
+                    <blockquote>
+                        <p>Chief Trainer, Quantum Machine Learning <br>
+                            10+ years in Quantum Industry<br> 7+ years in Quantum Product Building</p>
                     </blockquote>
                 </div>
             </div>
@@ -86,6 +104,29 @@
             </div>
         </div>
         <!-- Card item END -->
+        </div>
+        <swiper-container class="shadow swiper-container d-none d-lg-block" loop="true" navigation="true" pagination="true" pagination-clickable="true"
+        slides-per-view="3" space-between="15" autoplay-delay="2500">
+        <swiper-slide *ngFor="let item of allTeamData">
+            <div class="">
+                <div class="card shadow p-3 h-100 w-100">
+                    <div class="text-center p-4 rounded-3 position-relative mb-5 mb-md-0">
+                        <!-- Avatar -->
+                        <div class="avatar avatar-xl mb-3">
+                            <img class="avatar-img rounded-circle" [src]="item.image" alt="avatar">
+                        </div>
+                        <h6 class="mb-3">{{item.name}}</h6>
+
+                        <!-- <p>Class {{item?.class}}</p> -->
+                        <!-- Content -->
+                        <blockquote>
+                            <p [innerHTML]="item.about"></p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </swiper-slide>
+    </swiper-container>
     </div>
 </div>
 <!-- Reviews list END -->

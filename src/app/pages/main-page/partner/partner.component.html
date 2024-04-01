@@ -15,70 +15,17 @@
             <!-- University log slider -->
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                  <div class="carousel-item active" data-bs-interval="10000"> 
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <img src="assets/patner/cambridge.png" alt="">
-                        </div>
-                        <div class="col-sm-3">
-                            <img src="assets/patner/oxperd.png"  alt="">
-                        </div>
-                        <div class="col-sm-3">
-                            <img src="assets/patner/Wharton.png" alt="">
-                        </div>
-                        <div class="col-sm-3">
-                            <img src="assets/patner/ETH-z.png"  alt="">
+                    <div class="carousel-item" *ngFor="let image of internationalPartner.slice(0, internationalPartner.length-3); let i = index"
+                        [class.active]="i === 0">
+                        <div class="row" >
+                            <div class="col-3" *ngFor="let img of internationalPartner.slice(i, i + 4)">
+                                <div >
+                                    <img [src]="img.image" alt="Carousel Image">
+                                </div>
+                               
+                            </div>
                         </div>
                     </div>
-                  </div>
-                  <div class="carousel-item" data-bs-interval="2000">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <img src="assets/patner/Columbia.png" alt="">
-                        </div>
-                        <div class="col-sm-3">
-                            <img src="assets/patner/caltech.png" alt="">
-                        </div>
-                        <div class="col-sm-3">
-                            <img src="assets/patner/Princeton.png" alt="" class="">
-                        </div>
-                        <div class="col-sm-3">
-                            <img src="assets/patner/Harvard_1Resize.png" alt="">
-                        </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <img src="assets/patner/LSE.png" alt="">
-                        </div>
-                        <div class="col-sm-3">
-                            <img src="assets/patner/Yale.png" alt="">
-                        </div>
-                        <div class="col-sm-3">
-                            <img src="assets/patner/MIT.png" alt="">
-                        </div>
-                        <div class="col-sm-3">
-                            <img src="assets/patner/Cornell University.png" alt="">
-                        </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <img src="assets/patner/Mahindra_University.png" alt="" class="mt-5" >
-                        </div>
-                        <div class="col-sm-3">
-                            <img src="assets/patner/RV.png" alt="" class="h-75">
-                        </div>
-                        <div class="col-sm-3">
-                            <img src="assets/patner/MIT.png" alt="">
-                        </div>
-                        <div class="col-sm-3">
-                            <img src="assets/patner/Cornell University.png" alt="">
-                        </div>
-                    </div>
-                  </div>
                 </div>
                 <button class="carousel-control-prev" id="prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev" >
                     <span class="left-previous rounded-circle p-2" aria-hidden="true" style="background-color: #313D9C; ">
@@ -87,6 +34,35 @@
                     <span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" id="next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next" (click)="clickFun()">
+                    <span class="right-next rounded-circle p-2" aria-hidden="true" style="background-color: #313D9C; ">
+                        <span class="text-center"><i class="fas fa-chevron-right"></i></span>
+                    </span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+
+              <div id="carouselExampleAutoplaying" class="carousel slide mt-5" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item" *ngFor="let image of nationalPartner.slice(0, nationalPartner.length-3); let i = index"
+                        [class.active]="i === 0">
+                        <div class="row" >
+                            <div class="col-3" *ngFor="let img of nationalPartner.slice(i, i + 4)">
+                                <div class="indianUniv" >
+                                    <img [src]="img.image" alt="Carousel Image">
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" id="prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev" >
+                    <span class="left-previous rounded-circle p-2" aria-hidden="true" style="background-color: #313D9C; ">
+                        <span class="text-center"  ><i class="fas fa-chevron-left"></i></span>
+                    </span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" id="nextOne" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next" >
                     <span class="right-next rounded-circle p-2" aria-hidden="true" style="background-color: #313D9C; ">
                         <span class="text-center"><i class="fas fa-chevron-right"></i></span>
                     </span>
